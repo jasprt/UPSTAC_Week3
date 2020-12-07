@@ -1,0 +1,32 @@
+ECHO RUNNING-DB
+
+:: Change directory for DB below
+cd "C:\Program Files\MySQL\MySQL Server 8.0\bin"
+
+START .\mysqld.exe --console
+timeout 4
+ECHO "DB STARTED"
+
+ECHO "Starting UI using 'yarn start'"
+
+:: Change directory for UI application below
+cd "C:\Users\*random*"
+
+START yarn start
+
+ECHO "Cleaning old API Jar using 'mvn clean'"
+
+:: Change directory for Springboot application below
+cd "C:\Users\*random*"
+
+CALL mvn clean
+ECHO "Cleaned old API Jar"
+ECHO "Creating new API Jar package using 'mvn package'"
+
+CALL mvn package -Dmaven.test.skip=true
+
+ECHO "Created new API Jar package using 'mvn package'"
+cd target
+ECHO "Running UPSTAC API"
+java -jar upstac-api-w3-0.0.1-SNAPSHOT.jar
+cmd /k
