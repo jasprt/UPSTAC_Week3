@@ -24,11 +24,11 @@ import org.upgrad.upstac.users.UserService;
 public class AuthController {
 
 
-    private AuthenticationManager authenticationManager;
+    private final AuthenticationManager authenticationManager;
 
-    private TokenProvider tokenProvider;
+    private final TokenProvider tokenProvider;
 
-    private UserService userService;
+    private final UserService userService;
 
 
     private static final Logger log = LoggerFactory.getLogger(AuthController.class);

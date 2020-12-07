@@ -17,7 +17,7 @@ public class TestRequestService {
     private TestRequestRepository testRequestRepository;
 
 
-    private static Logger logger = LoggerFactory.getLogger(TestRequestService.class);
+    private static final Logger logger = LoggerFactory.getLogger(TestRequestService.class);
 
 
     public TestRequest createTestRequestFrom(User user, CreateTestRequest createTestRequest) {

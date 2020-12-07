@@ -19,7 +19,7 @@ public class ConsultationService {
     @Autowired
     private ConsultationRepository consultationRepository;
 
-    private static Logger logger = LoggerFactory.getLogger(ConsultationService.class);
+    private static final Logger logger = LoggerFactory.getLogger(ConsultationService.class);
 
 
     @Transactional

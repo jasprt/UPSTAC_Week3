@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 public class UpgradUserDetailsService implements UserDetailsService {
 
 
-    private UserService userService;
+    private final UserService userService;
 
 
     private static final Logger log = LoggerFactory.getLogger(UpgradUserDetailsService.class);

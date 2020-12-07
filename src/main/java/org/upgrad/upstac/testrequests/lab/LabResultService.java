@@ -21,7 +21,7 @@ public class LabResultService {
     private LabResultRepository labResultRepository;
 
 
-    private static Logger logger = LoggerFactory.getLogger(LabResultService.class);
+    private static final Logger logger = LoggerFactory.getLogger(LabResultService.class);
 
 
     private LabResult createLabResult(User tester, TestRequest testRequest) {

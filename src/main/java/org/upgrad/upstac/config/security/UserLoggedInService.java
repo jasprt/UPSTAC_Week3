@@ -11,7 +11,7 @@ import org.upgrad.upstac.users.UserService;
 @Component
 public class UserLoggedInService {
 
-    private UserService userService;
+    private final UserService userService;
 
     @Autowired
     public UserLoggedInService(UserService userService) {

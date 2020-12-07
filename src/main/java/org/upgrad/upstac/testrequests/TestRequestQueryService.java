@@ -31,7 +31,7 @@ public class TestRequestQueryService {
     @Autowired
     private ConsultationRepository consultationRepository;
 
-    private static Logger logger = LoggerFactory.getLogger(TestRequestQueryService.class);
+    private static final Logger logger = LoggerFactory.getLogger(TestRequestQueryService.class);
 
 
     public List<TestRequest> findAll() {

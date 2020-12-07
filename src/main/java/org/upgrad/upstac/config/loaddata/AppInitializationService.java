@@ -85,7 +85,6 @@ public class AppInitializationService implements ApplicationListener<Application
     public static RegisterRequest createRegisterRequestWith(String user, int pincode) {
         RegisterRequest registerRequest = new RegisterRequest();
         String userNameinLowerCase = user.replace(" ", "").toLowerCase().replaceAll("[^a-z0-9]", "");
-        ;
         registerRequest.setUserName(userNameinLowerCase);
         registerRequest.setPassword("password");
         registerRequest.setFirstName(user);

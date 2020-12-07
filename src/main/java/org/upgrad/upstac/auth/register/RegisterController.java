@@ -16,7 +16,7 @@ import static org.upgrad.upstac.exception.UpgradResponseStatusException.asBadReq
 public class RegisterController {
 
 
-    private RegisterService registerService;
+    private final RegisterService registerService;
 
 
     private static final Logger log = LoggerFactory.getLogger(RegisterController.class);

@@ -11,14 +11,14 @@ import java.io.InputStream;
 
 public class MyMultiPartFile implements MultipartFile {
     private final String name;
-    private String originalFilename;
+    private final String originalFilename;
     @Nullable
-    private String contentType;
+    private final String contentType;
     private final byte[] content;
 
 
     public MyMultiPartFile(String name, InputStream contentStream) throws IOException {
-        this(name, name, "image/png", (byte[]) FileCopyUtils.copyToByteArray(contentStream));
+        this(name, name, "image/png", FileCopyUtils.copyToByteArray(contentStream));
     }
 
     public MyMultiPartFile(String name, @Nullable String originalFilename, @Nullable String contentType, @Nullable byte[] content) {
@@ -47,7 +47,7 @@ public class MyMultiPartFile implements MultipartFile {
     }
 
     public long getSize() {
-        return (long) this.content.length;
+        return this.content.length;
     }
 
     public byte[] getBytes() throws IOException {
