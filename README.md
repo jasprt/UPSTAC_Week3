@@ -7,4 +7,4 @@ Before running the applciation:
 5. Make sure to add the correct schema defined in application.properties in MYSQL.
 
 
-# Use the start_UPSTAC.bat file to launch the DB, UI and the springboot application (Note: Make sure to edit the correct directories where the project is located before running it)
+###Use the start_UPSTAC.bat file to launch the DB, UI and the springboot application (Note: Make sure to edit the correct directories where the project is located before running it)
